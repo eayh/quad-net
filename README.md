@@ -1,1 +1,1 @@
-# quad-net.github.io
+# quad-net
