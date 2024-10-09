@@ -75,12 +75,14 @@
             font-size: 14px;
         }
         /* Abstract section styling */
-        .abstract {
+.abstract {
             background-color: #f9f9f9;
             padding: 20px;
             border: 1px solid #ddd;
             margin-top: 30px;
-            text-align: left; /* Align text to the left */
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .abstract h3 {
             font-size: 20px;
@@ -90,6 +92,13 @@
         .abstract p {
             font-size: 16px;
             line-height: 1.6;
+            text-align: justify; /* Ensures the text is justified */
+            margin: 0 20px; /* Adds margin on both sides for spacing */
+        }
+        .index-terms {
+            margin-top: 20px;
+            font-style: italic;
+            text-align: justify;
         }
     </style>
 </head>
@@ -109,12 +118,7 @@
 </header>
 
 <main>
-        <section class="abstract">
-        <h3>Abstract</h3>
-        <p>
-            Recently, neural vocoders have applied signal processing methods to synthesize speech to reduce computational complexity. However, most methods lack the benefits of a data-driven approach and the flexibility of hyper-parameters, such as filter length, because they rely on fixed signal processing filters. In this paper, we introduce Quad-Net, a network that includes restricted convolutional layers shaped by quadrature mirror synthesis filter banks. It is optimized with a perfect reconstruction loss derived from perfect reconstruction filter banks. This enables us to control filter lengths and degrees of data-drivenness. The results show that the filter parameters trained in our model exhibit characteristics similar to those of other signal processing methods with lower parameters. Furthermore, by increasing the filter length of Quad-Net, we can obtain filters that have complex frequency responses. It shows that a new approach enables the design of more complex filters that are adaptive to neural networks, diverging from previous methods.
-        </p>
-    </section>
+
 
     
     <section class="image-section">
@@ -122,7 +126,13 @@
         <p>Figure 1. Visualization of Quad-Net architecture.</p>
     </section>
 
-
+        <section class="abstract">
+        <h3>Abstract</h3>
+        <p>
+            Recently, neural vocoders have applied signal processing methods to synthesize speech to reduce computational complexity. However, most methods lack the benefits of a data-driven approach and the flexibility of hyper-parameters, such as filter length, because they rely on fixed signal processing filters. In this paper, we introduce Quad-Net, a network that includes restricted convolutional layers shaped by quadrature mirror synthesis filter banks. It is optimized with a perfect reconstruction loss derived from perfect reconstruction filter banks. This enables us to control filter lengths and degrees of data-drivenness. The results show that the filter parameters trained in our model exhibit characteristics similar to those of other signal processing methods with lower parameters. Furthermore, by increasing the filter length of Quad-Net, we can obtain filters that have complex frequency responses. It shows that a new approach enables the design of more complex filters that are adaptive to neural networks, diverging from previous methods.
+        </p>
+    </section>
+    
 
     <section>
         <h2>Audio samples synthesized from models</h2>
