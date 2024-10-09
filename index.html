@@ -142,17 +142,82 @@
         </p>
     </section>
 
-    <!-- New Experiment Results Section -->
+    <!-- Experiment Results Section -->
     <section class="experiment-results">
         <h2>Experiment Results</h2>
 <ul>
     <li>I. Synthesized Audio Samples</li>
-    <li>II. Speech</li>
+    <li>II. Perfect Reconstruction</li>
 </ul>
     </section>
 
     <section>
-        <h2>I. Audio samples synthesized from models</h2>
+        <h2>I. Synthesized Audio Samples</h2> 
+        <table>
+            <tr>
+                <th>Model</th>
+                <th colspan="3">Audio Files</th>
+            </tr>
+            <tr>
+                <td>Ground Truth</td>
+                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (128, 0.1, 8)</td>
+                <td><audio controls><source src="audio/0_128_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_128_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_128_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (128, 1, 8)</td>
+                <td><audio controls><source src="audio/0_128_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_128_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_128_1.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 0.1, 8)</td>
+                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 1, 8)</td>
+                <td><audio controls><source src="audio/0_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_1.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 5, 8)</td>
+                <td><audio controls><source src="audio/0_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_5.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 5, 128)</td>
+                <td><audio controls><source src="audio/0_96_5128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_5128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_5128.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>HiFI-GAN V2</td>
+                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>iSTFTNet V2</td>
+                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- New section for Perfect Reconstruction -->
+    <section>
+        <h2>II. Perfect Reconstruction</h2> 
         <table>
             <tr>
                 <th>Model</th>
