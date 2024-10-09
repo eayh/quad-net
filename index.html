@@ -3,54 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quad-Net Demo</title>
-</head>
-<body>
-    <header>
-        <h1>Quad-Net Demo Page</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Featured Image</h2>
-            <img src="path_to_image.jpg" alt="Description of the image">
-            <p>This image shows spectrogram of original sample and generated sample.</p>
-        </section>
-        <section>
-            <h2>Featured Audio</h2>
-            <audio controls>
-                <source src="audio/0_96_01.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-            <p>This audio clip.</p>
-        </section>
-    </main>
-</body>
-
-    <title>Audio Collection</title>
+    <title>Quad-Net: Fast and Lightweight Spectrogram Vocoder</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #333;
+        }
+        main {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            max-width: 1000px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #D52749;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 20px;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin: 40px 0;
+            text-align: center;
         }
         td, th {
-            border: 1px solid #dddd;
-            text-align: center;
-            padding: 0.5px;
-            width: 10%;
+            border: 1px solid #ddd;
+            padding: 10px;
         }
         audio {
             width: 100%;
         }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Audio Collection</h1>
-    </header>
-    <main>
+
+<header>
+    <h1>Quad-Net: Fast and Lightweight Spectrogram Vocoder</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Figure 1: Comparison of Standard Model and Quad-Net</h2>
+        <img src="/mnt/data/image.png" alt="Comparison of Standard Model and Quad-Net">
+        <p>Figure 1. Visualization of standard model and Quad-Net architecture (ours).</p>
+    </section>
+
+    <section>
+        <h2>Audio Collection</h2>
         <table>
             <tr>
-                <td>Model</td>
+                <th>Model</th>
                 <th colspan="3">Audio Files</th>
             </tr>
             <tr>
@@ -58,7 +96,6 @@
                 <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
-
             </tr>
             <tr>
                 <td>Quad-Net (128, 0.1, 8)</td>
@@ -72,7 +109,7 @@
                 <td><audio controls><source src="audio/1_128_1.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/2_128_1.wav" type="audio/wav"></audio></td>
             </tr>
-             <tr>
+            <tr>
                 <td>Quad-Net (96, 0.1, 8)</td>
                 <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
@@ -84,32 +121,37 @@
                 <td><audio controls><source src="audio/1_96_1.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/2_96_1.wav" type="audio/wav"></audio></td>
             </tr>
-             <tr>
+            <tr>
                 <td>Quad-Net (96, 5, 8)</td>
                 <td><audio controls><source src="audio/0_96_5.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/1_96_5.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/2_96_5.wav" type="audio/wav"></audio></td>
             </tr>
-             <tr>
+            <tr>
                 <td>Quad-Net (96, 5, 128)</td>
                 <td><audio controls><source src="audio/0_96_5128.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/1_96_5128.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="audio/2_96_5128.wav" type="audio/wav"></audio></td>
             </tr>
-             <tr>
+            <tr>
                 <td>HiFI-GAN V2</td>
                 <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
             </tr>
-             <tr>
+            <tr>
                 <td>iSTFTNet V2</td>
                 <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
             </tr>
-
         </table>
-</html>
+    </section>
+</main>
 
+<footer>
+    <p>&copy; 2024 Quad-Net. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
