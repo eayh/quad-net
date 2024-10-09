@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quad-Net: Melspectrogram Vocoder with Convolutional Layers Restricted by the Quadrature Mirror Filter for Perfect Reconstruction</title>
+    <title>Quad-Net: Fast and Lightweight Spectrogram Vocoder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,45 +23,59 @@
             margin: 0;
             color: #333;
         }
+        h2 {
+            font-size: 24px;
+            color: #D52749;
+            margin-bottom: 20px;
+        }
+        .sub-header {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .author-list {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .author-list a {
+            color: #0073e6;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .author-list a:hover {
+            text-decoration: underline;
+        }
         main {
-            margin: 20px;
+            max-width: 900px;
+            margin: auto;
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ddd;
-            max-width: 1000px;
-            margin: auto;
         }
-        section {
-            margin-bottom: 40px;
+        .abstract {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 30px;
         }
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        .abstract h3 {
+            font-size: 20px;
             color: #D52749;
+            margin-bottom: 10px;
+        }
+        .abstract p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .image-section {
+            text-align: center;
+            margin: 40px 0;
         }
         img {
             display: block;
             max-width: 100%;
             height: auto;
             margin: 0 auto 20px;
-        }
-        p {
-            font-size: 18px;
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 40px 0;
-            text-align: center;
-        }
-        td, th {
-            border: 1px solid #ddd;
-            padding: 10px;
-            width: 10%;
-        }
-        audio {
-            width: 100%;
         }
         footer {
             text-align: center;
@@ -75,78 +89,30 @@
 <body>
 
 <header>
-    <h1>Quad-Net</h1>
+    <h1>Quad-Net: Fast and Lightweight Spectrogram Vocoder</h1>
+    <div class="sub-header">Fast and Lightweight Mel-Spectrogram Vocoder Incorporating iSTFT</div>
+    <div class="author-list">
+        <a href="#">Author 1</a>, 
+        <a href="#">Author 2</a>, 
+        <a href="#">Author 3</a>
+        <br>
+        Research Group, Institution
+        <br>Published in: Conference XYZ, 2024
+    </div>
 </header>
 
 <main>
-    <section>
-
-        <img src="quad_net_figure.png" alt="Quad-Net">
-        <p>Figure 1. Visualization of Quad-Net architecture.</p>
+    <section class="image-section">
+        <h2>Figure 1: Comparison of Standard Model and Quad-Net</h2>
+        <img src="/mnt/data/image.png" alt="Comparison of Standard Model and Quad-Net">
+        <p>Figure 1. Visualization of standard model and Quad-Net architecture (ours).</p>
     </section>
 
-    <section>
-        <h2>Audio samples synthesized from models</h2>
-        <table>
-            <tr>
-                <th>Model</th>
-                <th colspan="3">Audio Files</th>
-            </tr>
-            <tr>
-                <td>Ground Truth</td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Quad-Net (128, 0.1, 8)</td>
-                <td><audio controls><source src="audio/0_128_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_128_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_128_01.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Quad-Net (128, 1, 8)</td>
-                <td><audio controls><source src="audio/0_128_1.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_128_1.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_128_1.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Quad-Net (96, 0.1, 8)</td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Quad-Net (96, 1, 8)</td>
-                <td><audio controls><source src="audio/0_96_1.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_1.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_1.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Quad-Net (96, 5, 8)</td>
-                <td><audio controls><source src="audio/0_96_5.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_5.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_5.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Quad-Net (96, 5, 128)</td>
-                <td><audio controls><source src="audio/0_96_5128.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_5128.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_5128.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>HiFI-GAN V2</td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>iSTFTNet V2</td>
-                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
-            </tr>
-        </table>
+    <section class="abstract">
+        <h3>Abstract</h3>
+        <p>
+            In recent text-to-speech synthesis and voice conversion systems, a mel-spectrogram is commonly applied as an intermediate representation, and the need for a mel-spectrogram vocoder is increasing. A mel-spectrogram vocoder must solve three inverse problems: recovery of the original-scale magnitude spectrogram, phase reconstruction, and frequency-to-time conversion. In this paper, we propose a lightweight model, Quad-Net, which simplifies this process by integrating an inverse short-time Fourier transform (iSTFT) to reconstruct raw waveforms efficiently, reducing computational overhead while maintaining high speech quality.
+        </p>
     </section>
 </main>
 
