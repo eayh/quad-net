@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +16,7 @@
             background-color: #fff;
             padding: 20px;
             text-align: center;
-             margin: 20px;
+            margin: 20px;
             border: 1px solid #ddd;
             max-width: 1000px;
             margin: auto;
@@ -78,10 +74,9 @@
             font-size: 14px;
         }
         /* Abstract section styling */
-.abstract {
+        .abstract {
             background-color: #fff;
             padding: 20px;
-/*             border: 1px solid #ddd; */
             margin-top: 30px;
             width: 90%;
             margin-left: auto;
@@ -95,13 +90,28 @@
         .abstract p {
             font-size: 16px;
             line-height: 1.6;
-            text-align: justify; /* Ensures the text is justified */
-            margin: 0 20px; /* Adds margin on both sides for spacing */
+            text-align: justify;
+            margin: 0 20px;
         }
         .index-terms {
             margin-top: 20px;
             font-style: italic;
             text-align: justify;
+        }
+        /* Experiment Results section styling */
+        .experiment-results h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .experiment-results ul {
+            list-style-type: none;
+            font-size: 18px;
+            padding-left: 0;
+            margin-bottom: 40px;
+        }
+        .experiment-results ul li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -113,29 +123,33 @@
     <div class="author-list">
         <a href="#">Nam-Seok Song</a>, 
         <a href="#">Joon-Hyuk Chang</a>, 
-
         <br>Department of Electronics Engineering
-
         <br>Hanyang University
     </div>
 </header>
 
 <main>
 
-
-    
     <section class="image-section">
         <img src="quad_net_figure.png" alt="Quad-Net">
         <p>Figure 1. Visualization of Quad-Net architecture.</p>
     </section>
 
-        <section class="abstract">
+    <section class="abstract">
         <h3>Abstract</h3>
         <p>
             Recently, neural vocoders have applied signal processing methods to synthesize speech to reduce computational complexity. However, most methods lack the benefits of a data-driven approach and the flexibility of hyper-parameters, such as filter length, because they rely on fixed signal processing filters. In this paper, we introduce Quad-Net, a network that includes restricted convolutional layers shaped by quadrature mirror synthesis filter banks. It is optimized with a perfect reconstruction loss derived from perfect reconstruction filter banks. This enables us to control filter lengths and degrees of data-drivenness. The results show that the filter parameters trained in our model exhibit characteristics similar to those of other signal processing methods with lower parameters. Furthermore, by increasing the filter length of Quad-Net, we can obtain filters that have complex frequency responses. It shows that a new approach enables the design of more complex filters that are adaptive to neural networks, diverging from previous methods.
         </p>
     </section>
-    
+
+    <!-- New Experiment Results Section -->
+    <section class="experiment-results">
+        <h2>Experiment Results</h2>
+        <ul>
+            <li>1. Synthesized Audio Samples</li>
+            <li>2. Speech</li>
+        </ul>
+    </section>
 
     <section>
         <h2>Audio samples synthesized from models</h2>
@@ -203,3 +217,4 @@
 </main>
 
 </body>
+</html>
