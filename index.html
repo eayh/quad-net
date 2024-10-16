@@ -146,7 +146,6 @@
     <section class="experiment-results">
         <h2>Experiment Results</h2>
 <ul>
-    <li>In this study, the LJspeech dataset was used, and the input was the ground truth mel spectrogram.</li>
     <li>I. Synthesized Audio Samples</li>
     <li>II. Perfect Reconstruction</li>
 </ul>
@@ -155,7 +154,86 @@
     <section>
         <h2>I. Synthesized Audio Samples</h2> 
         <table>
-            <!-- existing table content -->
+            <tr>
+                <th>Model</th>
+                <th colspan="1">Sample 1 </th>
+                <th colspan="1">Sample 2 </th>
+                <th colspan="1">Sample 3 </th>
+                <th colspan="1">Sample 4 </th>
+                <th colspan="1">Sample 5 </th>
+            </tr>
+            <tr>
+                <td>Ground Truth</td>
+                <td><audio controls><source src="audio/0_original.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_original.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_original.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_original.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_original.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (128, 0.1, 8)</td>
+                <td><audio controls><source src="audio/0_128_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_128_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_128_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_128_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_128_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (128, 1, 8)</td>
+                <td><audio controls><source src="audio/0_128_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_128_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_128_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_128_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_128_1.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 0.1, 8)</td>
+                <td><audio controls><source src="audio/0_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_96_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 1, 8)</td>
+                <td><audio controls><source src="audio/0_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_96_1.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 5, 8)</td>
+                <td><audio controls><source src="audio/0_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_96_5.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 5, 128)</td>
+                <td><audio controls><source src="audio/0_96_5_128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_5_128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_96_5_128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_96_5_128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_96_5_128.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>HiFI-GAN V2</td>
+                <td><audio controls><source src="audio/0_hifi.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_hifi.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_hifi.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_hifi.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_hifi.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>iSTFTNet V2</td>
+                <td><audio controls><source src="audio/0_istft.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_istft.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/2_istft.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/3_istft.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/4_istft.wav" type="audio/wav"></audio></td>
+            </tr>
         </table>
     </section>
 
@@ -163,20 +241,44 @@
     <section>
         <h2>II. Perfect Reconstruction</h2> 
         <table>
-            <!-- existing table content -->
+            <tr>
+                <th>Model</th>
+                <th colspan="1">Reconstructed sample 1</th>
+                <th colspan="1">Reconstructed sample 2</th>
+                <th colspan="1">Reconstructed sample 3</th>
+            </tr>
+            <tr>
+                <td>Ground Truth</td>
+                <td><audio controls><source src="audio/PR1_original.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR2_original.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR3_original.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 0.1, 8)</td>
+                <td><audio controls><source src="audio/PR1_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR2_96_01.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR3_96_01.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 1, 8)</td>
+                <td><audio controls><source src="audio/PR1_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR2_96_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR3_96_1.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Quad-Net (96, 5, 8)</td>
+                <td><audio controls><source src="audio/PR1_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR2_96_5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/PR3_96_5.wav" type="audio/wav"></audio></td>
+            </tr>
+<!--             <tr>
+                <td>Quad-Net (96, 5, 128)</td>
+                <td><audio controls><source src="audio/0_96_5128.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="audio/1_96_5128.wav" type="audio/wav"></audio></td>
+            </tr> -->
+
         </table>
     </section>
-
-    <!-- References Section -->
-    <footer>
-        <h2>References</h2>
-        <ol>
-            <li>Reference 1: Details of the reference</li>
-            <li>Reference 2: Details of the reference</li>
-            <li>Reference 3: Details of the reference</li>
-        </ol>
-    </footer>
-
 </main>
 
 </body>
